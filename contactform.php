@@ -24,7 +24,7 @@ $errors .= “\n Error: all fields are required”;
 
 if (!preg_match(
 
-“/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i”, $email_address))
+"/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i", $email_address))
 
 {
 
@@ -36,25 +36,25 @@ if( empty($errors))
 
 {
 
-$to = $myemail;
+  $to = $myemail;
 
-$email_subject = “Contact form submission: $name”;
+  $email_subject = "Contact form submission from website;
 
-$email_body = “You have received a new message. “.
+  $email_body = "You have received a new message. ".
 
-” Here are the details:\n Name: $name \n “.
+  " Here are the details:\n Name: $name \n ".
 
-“Email: $email_address\n Message \n $message”;
+  "Email: $email_address\n Message \n $message";
 
-$headers = “From: $myemail\n”;
+  $headers = "From: $myemail\n";
 
-$headers .= “Reply-To: $email_address”;
+  $headers .= "Reply-To: $email_address";
 
-mail($to,$email_subject,$email_body,$headers);
+  mail($to,$email_subject,$email_body,$headers);
 
 //redirect to the ‘thank you’ page
 
-header(‘Location: contact-form-thank-you.html’);
+header('Location: contact-form-thank-you.html');
 
 }
 
