@@ -2,7 +2,7 @@
 
   $errors = ";
 
-  $myemail = 'yourname@website.com';//<—–Put Your email address here. 
+  $myemail = 'yourname@website.com'; // Put your email address here
 
   if(empty($_POST['name']) ||
 
@@ -12,7 +12,7 @@
 
 {
 
-$errors .= “\n Error: all fields are required”;
+$errors .= "\n Error: all fields are required";
 
 }
 
@@ -28,7 +28,7 @@ if (!preg_match(
 
 {
 
-$errors .= “\n Error: Invalid email address”;
+$errors .= "\n Error: Invalid email address";
 
 }
 
@@ -52,7 +52,7 @@ if( empty($errors))
 
   mail($to,$email_subject,$email_body,$headers);
 
-//redirect to the ‘thank you’ page
+// Redirect to the "thank you" page
 
 header('Location: contact-form-thank-you.html');
 
